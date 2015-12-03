@@ -1,5 +1,15 @@
 var app = require('app');  // Module to control application life.
 var BrowserWindow = require('browser-window');  // Module to create native browser window.
+var SimplePeer = require('simple-peer');
+var wrtc = require('wrtc');
+var peer1 = new SimplePeer({ initiator: true, wrtc: wrtc });
+peer1.on('signal', function (data) {
+});
+peer1.on('connect', function () {
+});
+peer1.on('data', function () {
+});
+
 
 // Report crashes to our server.
 require('crash-reporter').start();
@@ -27,7 +37,7 @@ app.on('ready', function() {
   mainWindow.loadUrl('file://' + __dirname + '/index.html');
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function() {

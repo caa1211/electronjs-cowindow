@@ -1,0 +1,10 @@
+{
+  "name": "simpleclient",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "author": "caa@livemail.tw",
+  "license": "CC0-1.0",
+  "dependencies": {
+    "simple-peer": "^5.11.6"
+  }
+}
